@@ -80,7 +80,7 @@ The project consists of the following pipeline:
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/your-username/euro-2024-kafka-pinot-pipeline.git
+   git clone https://github.com/evanmathew/euro-2024-kafka-pinot-pipeline.git
    cd euro-2024-kafka-pinot-pipeline
    ```
 2. **Install dependencies**:
