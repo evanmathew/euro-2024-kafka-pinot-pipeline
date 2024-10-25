@@ -95,11 +95,15 @@ The project consists of the following pipeline:
    ```bash
    docker-compose up
    ```
-5. **Access Superset**:
-   - Visit `http://localhost:8088` in your browser.
-
-6. **Launch Airflow**:
+5. **Launch Airflow**:
    - Visit `http://localhost:8080` to view and manage DAGs.
+  
+6. **Connect Pinot Database with Superset**:
+   - Visit `http://localhost:8088` in your browser.
+   - Login with 'admin' as both password and user
+   - Add Database > Chosse Apache Pinot as database
+   - SQLAlchemy URI `pinot://pinot-broker:8099/query/sql?controller=http://pinot-controller:9000`
+   - Then you can start designing the `Chart` & `Dashboards`
 
 ## 💡Usage
 
