@@ -1,0 +1,30 @@
+{
+    "tableName": "matches",
+    "tableType": "REALTIME",
+    "segmentsConfig": {
+      "timeColumnName": "date",
+      "schemaName": "matches",
+      "replication": "1",
+      "replicasPerPartition": "1"
+    },
+    "tenants": {
+    },
+    "tableIndexConfig": {
+      "loadMode": "MMAP",
+      "streamConfigs": {
+        "streamType": "kafka",
+        "stream.kafka.topic.name": "euro2024_matches_data",
+        "stream.kafka.broker.list": "redpanda:9092",
+        "stream.kafka.consumer.type": "simple",
+        "stream.kafka.decoder.class.name": "org.apache.pinot.plugin.stream.kafka.KafkaJSONMessageDecoder",
+        "stream.kafka.consumer.prop.auto.offset.reset": "smallest",
+        "realtime.segment.flush.threshold.rows": "50000"
+      }
+    },
+    "ingestionConfig": {
+      "transformConfigs": [],
+      "filterConfig": null
+    },
+    "metadata": {}
+  }
+  

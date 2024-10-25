@@ -1,0 +1,28 @@
+{
+  "schemaName": "matches",
+  "dimensionFieldSpecs": [
+    { "name": "match_id", "dataType": "STRING" },
+    { "name": "stage", "dataType": "STRING" },
+    { "name": "stadium", "dataType": "STRING" },
+    { "name": "city", "dataType": "STRING" },
+    { "name": "winning_team", "dataType": "STRING" },
+    { "name": "team_a_id", "dataType": "STRING" },
+    { "name": "team_a_name", "dataType": "STRING" },
+    { "name": "team_b_id", "dataType": "STRING" },
+    { "name": "team_b_name", "dataType": "STRING" },
+    { "name": "team_a_formation", "dataType": "STRING" },
+    { "name": "team_b_formation", "dataType": "STRING" }
+  ],
+  "metricFieldSpecs": [
+    { "name": "team_a_score", "dataType": "INT" },
+    { "name": "team_b_score", "dataType": "INT" }
+  ],
+  "dateTimeFieldSpecs": [
+    {
+      "name": "date",
+      "dataType": "STRING",  
+      "format": "1:SECONDS:EPOCH",
+      "granularity": "1:SECONDS"
+    }
+  ]
+}

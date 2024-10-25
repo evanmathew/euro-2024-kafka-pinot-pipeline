@@ -1,0 +1,26 @@
+{
+  "schemaName": "groups",
+  "dimensionFieldSpecs": [
+    { "name": "group_id", "dataType": "STRING" },
+    { "name": "group_name", "dataType": "STRING" },
+    { "name": "team_id", "dataType": "STRING" },
+    { "name": "team_name", "dataType": "STRING" },
+    { "name": "points", "dataType": "INT" },
+    { "name": "matches_played", "dataType": "INT" },
+    { "name": "matches_won", "dataType": "INT" },
+    { "name": "matches_drawn", "dataType": "INT" },
+    { "name": "matches_lost", "dataType": "INT" },
+    { "name": "goals_scored", "dataType": "INT" },
+    { "name": "goals_conceded", "dataType": "INT" },
+    { "name": "goal_difference", "dataType": "INT" }
+  ],
+  "metricFieldSpecs": [],
+  "dateTimeFieldSpecs": [
+    {
+      "name": "ingestion_time",
+      "dataType": "LONG",
+      "format": "1:MILLISECONDS:EPOCH",
+      "granularity": "1:MILLISECONDS"
+    }
+  ]
+}

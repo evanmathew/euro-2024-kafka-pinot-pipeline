@@ -1,0 +1,23 @@
+{
+  "schemaName": "teams",
+  "dimensionFieldSpecs": [
+    { "name": "team_id", "dataType": "STRING" },
+    { "name": "team_name", "dataType": "STRING" },
+    { "name": "coach", "dataType": "STRING" },
+    { "name": "captain", "dataType": "STRING" },
+    { "name": "group_id", "dataType": "STRING" },
+    { "name": "group_name", "dataType": "STRING" }
+  ],
+  "metricFieldSpecs": [
+    { "name": "championships", "dataType": "INT" },
+    { "name": "runnersUp", "dataType": "INT" }
+  ],
+  "dateTimeFieldSpecs": [
+    {
+      "name": "ingestion_time",
+      "dataType": "LONG",
+      "format": "1:MILLISECONDS:EPOCH",
+      "granularity": "1:MILLISECONDS"
+    }
+  ]
+}

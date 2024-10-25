@@ -1,0 +1,28 @@
+{
+  "schemaName": "players",
+  "dimensionFieldSpecs": [
+    { "name": "player_id", "dataType": "STRING" },
+    { "name": "player_name", "dataType": "STRING" },
+    { "name": "position", "dataType": "STRING" },
+    { "name": "club", "dataType": "STRING" },
+    { "name": "team_name", "dataType": "STRING" }
+  ],
+  "metricFieldSpecs": [
+    { "name": "age", "dataType": "INT" },
+    { "name": "goals", "dataType": "INT" },
+    { "name": "assists", "dataType": "INT" },
+    { "name": "appearances", "dataType": "INT" },
+    { "name": "firstTeamAppearances", "dataType": "INT" },
+    { "name": "minutesPlayed", "dataType": "INT" },
+    { "name": "redCards", "dataType": "INT" },
+    { "name": "yellowCards", "dataType": "INT" }
+  ],
+  "dateTimeFieldSpecs": [
+    {
+      "name": "dateOfBirth",
+      "dataType": "STRING",
+      "format": "1:SECONDS:EPOCH",
+      "granularity": "1:SECONDS"
+    }
+  ]
+}
