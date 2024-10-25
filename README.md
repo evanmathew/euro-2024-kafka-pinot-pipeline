@@ -1,23 +1,23 @@
 
-# Real Time Data Warehouse Streaming
+# ⚽Real Time Data Warehouse Streaming
 
 This repository contains the code and configuration for the **EURO 2024 Real-Time Data Streaming and Visualization** project. 
 The project leverages a real-time data pipeline to stream football data (teams, players, matches, groups, and events) from an API into Kafka. 
 The data is processed and stored in **Apache Pinot** for fast analytics and visualized using **Apache Superset**.
 
-## Project Overview
+## 🛠 Project Overview
 
 The primary goal of this project is to demonstrate how to build and manage a **real-time data warehouse** using modern tools and technologies. 
 The data includes dynamic football statistics like live match events, player performance, and group standings for EURO 2024.
 
-### Key Components
+### 🚀 Key Components
 
 - **Apache Kafka**: Message broker used for real-time streaming of data.
 - **Apache Pinot**: OLAP data store for fast querying and analytics.
 - **Apache Superset**: Data visualization platform to create dashboards and monitor statistics.
 - **Apache Airflow**: Workflow orchestration for automated data extraction and streaming.
 
-## Architecture
+## 📋 Architecture
 
 The project consists of the following pipeline:
 
@@ -26,7 +26,7 @@ The project consists of the following pipeline:
 3. **Processing with Pinot**: Kafka feeds the data into Apache Pinot for storage and querying.
 4. **Visualization in Superset**: Real-time dashboards are created to visualize football statistics.
 
-## Repository Structure
+## 📂 Repository Structure
 
 ```
 📦 Real Time Data Warehouse Streaming
@@ -58,10 +58,20 @@ The project consists of the following pipeline:
 └── README.md                # Project documentation
 ```
 
-## Installation and Setup
+## ⚙️ Installation and Setup
 
-### Prerequisites
+### 🛑 Prerequisites
 
+- Create a RapidAPI Account
+  - Visit the [EURO 2024 API on RapidAPI](https://rapidapi.com/yuvr99-WHTEITBQbOc/api/euro-20242).
+  - Sign up or log in to your RapidAPI account.
+  - Subscribe to the API Gateway and obtain your API key.
+- Add the RapidAPI Key
+  - Navigate to the constants.py file in the utils/ directory.
+  - Add your RapidAPI key in the following format:
+    ```
+    RAPIDAPI_KEY = "your-rapidapi-key"
+    ```
 - Docker and Docker Compose installed.
 - Apache Kafka, Pinot, and Superset configured.
 - Airflow environment set up with Python 3.10.
@@ -77,23 +87,27 @@ The project consists of the following pipeline:
    ```bash
    pip install -r requirements.txt
    ```
-3. **Start the Docker containers**:
+3. **Build the Docker File**:
+   ```bash
+   docker build -t euro-2024-kafka-pinot-pipeline .
+   ```
+4. **Start the Docker containers**:
    ```bash
    docker-compose up
    ```
-4. **Access Superset**:
+5. **Access Superset**:
    - Visit `http://localhost:8088` in your browser.
 
-5. **Launch Airflow**:
+6. **Launch Airflow**:
    - Visit `http://localhost:8080` to view and manage DAGs.
 
-## Usage
+## 💡Usage
 
 - **Airflow DAGs** orchestrate the extraction of data from the API and stream it to Kafka.
 - **Pinot** stores the streamed data for fast querying.
 - **Superset Dashboards** visualize the real-time statistics, offering insights into player performance, match events, and group standings.
 
-## Topics and Schemas
+## 📊 Topics and Schemas
 
 - **players**: Contains player statistics like goals, assists, and appearances.
 - **teams**: Stores team details such as coach, captain, and championships.
@@ -102,7 +116,7 @@ The project consists of the following pipeline:
 
 ---
 
-## Architecture
+## 🏗 Architecture
 
 Below is the high-level architecture of the real-time data streaming pipeline:
 
